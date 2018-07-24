@@ -45,6 +45,9 @@ let s:cg_enumConst=s:cg_preprocMacro
 let s:cg_syntaxError='#AF0000' " Dark red
 let s:cg_syntaxWarning='#AF8700' " Yellow
 
+"let s:cg_annotation='#1AB166' " Orange
+let s:cg_annotation='#E1AE48' " Orange
+
 " Tex
 let s:cg_tex=s:cg_foreground
 let s:cg_tex_section=s:cg_preprocMacro
@@ -84,6 +87,8 @@ if &t_Co == 256 " 256 colour xterm
 	let s:ct_syntaxError='124'
 	let s:ct_syntaxWarning='136'
 
+	let s:ct_annotation='179' "'35'
+
 	let s:ct_tex=s:ct_foreground
 	let s:ct_tex_section=s:ct_preprocMacro
 	let s:ct_tex_statement=s:ct_statement
@@ -118,6 +123,8 @@ else " 16 colour
 	let s:ct_enumConst=s:ct_preprocMacro
 	let s:ct_syntaxError='DarkRed'
 	let s:ct_syntaxWarning='DarkYellow'
+
+	let s:ct_annotation='DarkYellow'
 
 	let s:ct_tex=s:ct_foreground
 	let s:ct_tex_section=s:ct_preprocMacro
@@ -182,6 +189,8 @@ exe 'hi Label ctermfg='.s:ct_label.' guifg='.s:cg_label
 exe 'hi String ctermfg='.s:ct_string.' guifg='.s:cg_string
 exe 'hi Type cterm=none gui=none ctermfg='.s:ct_type.' guifg='.s:cg_type
 exe 'hi Error ctermbg='.s:ct_syntaxError.' guibg='.s:cg_syntaxError
+
+exe 'hi Annotation term=bold cterm=bold gui=bold ctermfg='.s:ct_annotation.' guifg='.s:cg_annotation
 
 " Tex
 exe 'hi texMath ctermfg='.s:ct_tex.' guifg='.s:cg_tex
