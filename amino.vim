@@ -41,6 +41,7 @@ let s:cg_statement='#569CD6' " Blue
 let s:cg_label='#FEFE55' " Yellow
 let s:cg_string='#55BE67' " Mild green
 let s:cg_type='#55FE55' " Green
+let s:cg_conceal=s:cg_variable
 let s:cg_enumConst=s:cg_preprocMacro
 let s:cg_syntaxError='#AF0000' " Dark red
 let s:cg_syntaxWarning='#AF8700' " Yellow
@@ -83,6 +84,7 @@ if &t_Co == 256 " 256 colour xterm
 	let s:ct_label='227'
 	let s:ct_string='71'
 	let s:ct_type='83'
+	let s:ct_conceal=s:ct_variable
 	let s:ct_enumConst=s:ct_preprocMacro
 	let s:ct_syntaxError='124'
 	let s:ct_syntaxWarning='136'
@@ -120,6 +122,7 @@ else " 16 colour
 	let s:ct_label='Yellow'
 	let s:ct_string='DarkGreen'
 	let s:ct_type='Blue'
+	let s:ct_conceal=s:ct_variable
 	let s:ct_enumConst=s:ct_preprocMacro
 	let s:ct_syntaxError='DarkRed'
 	let s:ct_syntaxWarning='DarkYellow'
@@ -202,6 +205,8 @@ highlight link texSubscript texMath
 highlight link texSubscripts texMath
 exe 'hi texSection ctermfg='.s:ct_tex_section.' guifg='.s:cg_tex_section
 exe 'hi texBeginEndName ctermfg='.s:ct_tex_beginEndName.' guifg='.s:cg_tex_beginEndName
+exe 'hi Conceal cterm=none gui=none ctermbg='.s:ct_background
+	\.' guibg='.s:cg_background.' ctermfg='.s:ct_conceal.' guifg='.s:cg_conceal
 
 " Vim
 exe 'hi vimOption ctermfg='.s:ct_vim_option.' guifg='.s:cg_vim_option
