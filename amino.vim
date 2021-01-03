@@ -1,4 +1,4 @@
-" amino.vim colour scheme by Stochastica (vel Horosphere)
+" amino.vim colour scheme by Stochastica
 " Supports 16-coloured, 256-coloured, and GUI.
 
 " Cleanup

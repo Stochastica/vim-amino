@@ -11,12 +11,3 @@ the end of `$MYVIMRC`:
 ```vim
 colorscheme amino
 ```
-
-## Issues
-
-At the moment Amino checks the loading status of airline by
-```vim
-if exists('g:airline_powerline_fonts')
-```
-Hence the symbol `g:airline_powerline_fonts` must be defined before loading
-Amino.
